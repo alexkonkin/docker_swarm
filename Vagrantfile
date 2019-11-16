@@ -52,9 +52,7 @@ $add_workers = <<-SCRIPT
   for i in {1..3};do
     sshpass -p 'vagrant' ssh -o StrictHostKeyChecking=no vagrant@docker-worker$i sudo $cmd
   done
-  #sshpass -p 'vagrant' ssh -o StrictHostKeyChecking=no vagrant@docker-worker1 sudo $cmd
-  #sshpass -p 'vagrant' ssh -o StrictHostKeyChecking=no vagrant@docker-worker2 sudo $cmd
-  #sshpass -p 'vagrant' ssh -o StrictHostKeyChecking=no vagrant@docker-worker3 sudo $cmd
+
   docker node ls
 SCRIPT
 
